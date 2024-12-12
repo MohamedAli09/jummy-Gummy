@@ -1,17 +1,14 @@
 body {
   background-color: yellow;
-  display: flex;
-  align-items: center; /* Vertically centers the card */
-  justify-content: center; /* Horizontally centers the card */
-  height: 100vh; /* Ensures the body takes the full height of the viewport */
 }
+
 .container-content {
-  width: 325px;
-  /* height: 538.465px; */
   flex-shrink: 0;
+  position: relative;
+  margin-top: 140px;
 }
-.container{
-  width: 1100px;
+.container {
+  max-width: 1100px;
 }
 .card {
   width: 325px;
@@ -19,11 +16,9 @@ body {
   flex-shrink: 0;
   border-radius: 12px;
   background-color: #fff;
-  display: flex;
-  flex-direction: column; /* Ensures elements stack vertically */
   align-items: center;
   justify-content: center;
-  position: relative;
+  position: relative; /* Ensure absolute elements are positioned relative to the card */
 }
 
 .title-cards {
@@ -43,6 +38,8 @@ body {
   display: block;
   color: #000;
   margin-bottom: 10px;
+
+  text-align: center;
 }
 
 .price p {
@@ -77,24 +74,17 @@ body {
   letter-spacing: -0.4px;
 }
 
-.img {
-  /* display: flex;
-  justify-content: center; */
-  width: 100%;
-  /* flex-shrink: 0; */
-}
-
 .img img {
-  width: 50%;
+  width: 217.237px;
+  height: 217.237px;
   position: absolute;
-  top: 50px;
+  top: 48px;
+  left: -20px;
 }
 .img {
   position: absolute;
-  top: -120px;
-  left: 80px;
-  /* display: flex; */
-  flex-direction: column;
+  top: -150px;
+  left: 73px;
 }
 .img svg {
   width: 47%;
@@ -102,33 +92,111 @@ body {
 
 .img .gummy {
   position: absolute;
-  top: 174px;
+  top: 230px;
   left: 22px;
+  width: 181.73px;
+  height: 81.464px;
 }
 .img .yummy {
   position: absolute;
-  top: 10px;
-  left: 0px;
+  top: 4px;
+  left: -14px;
+  width: 179.652px;
+  height: 66.956px;
 }
 .img .right {
-  width: 80.507px;
-  height: 130.583px;
+  width: 62.507px;
+  height: 196.583px;
   flex-shrink: 0;
 }
 .img .left {
-  width: 80.507px;
-  height: 145.583px;
+  width: 64.774px;
+  height: 205.914px;
   flex-shrink: 0;
 }
 
 .right {
   position: absolute;
-  top: 50px;
-  left: 132px;
+  top: 38px;
+  left: 165px;
 }
 .left {
   position: absolute;
-  top: 68px;
-  left: -40px;
+  top: 66px;
+  left: -41px;
 }
 
+.test {
+  /* coulumn */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 500px;
+  }
+  .card {
+    width: 100%;
+    height: 100%;
+
+    padding-bottom: 20px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .img {
+    left: -2px;
+    width: 100%;
+    position: absolute;
+    top: -158px;
+  }
+  .img img {
+    position: relative;
+    width: 70%;
+    left: 0px;
+    top: -97px;
+    height: 155px !important;
+  }
+  .img .yummy {
+    position: relative;
+    top: 63px;
+    left: -8px;
+    height: 48.428px;
+  }
+
+  .img .gummy {
+    position: relative;
+    top: -127px;
+    left: 15px;
+    height: 59.32px;
+  }
+  .right {
+    position: relative;
+    left: 116px;
+    top: 36px;
+    height: 143px !important;
+  }
+  .left {
+    position: relative;
+    left: -110px;
+    top: 60px;
+    height: 140px !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 1100px;
+  }
+}
+
+.row {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
