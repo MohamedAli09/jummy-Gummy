@@ -126,7 +126,7 @@ body {
   left: -41px;
 }
 
-.test {
+.product-information {
   /* coulumn */
   flex-direction: column;
   justify-content: center;
